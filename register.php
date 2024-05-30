@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sss", $name, $email, $password);
 
     if ($stmt->execute()) {
-        echo "Registration successful!";
+        // echo "Registration successful!";
         // Redirect to login page or another page
-        header("Location: index.html");
+        header("Location: login.html");
         exit();
     } else {
         echo "Error: " . $stmt->error;
